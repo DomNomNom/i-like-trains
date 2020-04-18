@@ -2,8 +2,8 @@ function player_died(event)
     if not event.cause then return end
     if event.cause.type ~= 'locomotive' then return end
     if event.force.name ~= 'player' then return end
-    local player = game.players[event.force.index]
-    player.surface.play_sound{path = "i-like-trains", position = player.position}
+    local character = event.entity
+    character.surface.play_sound{path="i-like-trains", position=character.position}
 end
 
 script.on_event(defines.events.on_entity_died, player_died, {
