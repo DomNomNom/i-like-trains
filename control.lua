@@ -1,7 +1,6 @@
 function player_died(event)
     if not event.cause then return end
     if event.cause.type ~= 'locomotive' then return end
-    if event.force.name ~= 'player' then return end
     local character = event.entity
     character.surface.play_sound{path="i-like-trains", position=character.position}
 end
