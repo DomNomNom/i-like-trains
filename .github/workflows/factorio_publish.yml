@@ -30,7 +30,7 @@ jobs:
       uses: Roang-zero1/factorio-mod-luacheck@v1.1.0
       with:
         # URL to the luacheckrc configuration file to be used during checking.
-        luacheckrc_url: # optional, default is https://raw.githubusercontent.com/Nexela/Factorio-luacheckrc/0.17/.luacheckrc
+        luacheckrc_url: https://raw.githubusercontent.com/Nexela/Factorio-luacheckrc/0.17/.luacheckrc
 
     - name: Factorio Mod Portal Publish
       uses: shanemadden/factorio-mod-portal-publish@1.0.3
