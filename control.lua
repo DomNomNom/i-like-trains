@@ -1,4 +1,4 @@
-function player_died(event)
+local function player_died(event)
     if not event.cause then return end
     if event.cause.type ~= 'locomotive' then return end
     local character = event.entity
