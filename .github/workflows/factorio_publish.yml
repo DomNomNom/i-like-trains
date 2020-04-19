@@ -1,23 +1,16 @@
-name: factorio_publish
-
-on:
-  push:
-    branches: [ master ]
-
+on: push
+name: Publish
 jobs:
   publish:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@master
-
     - name: Factorio Mod luacheck
       uses: Roang-zero1/factorio-mod-luacheck@v1.1.0
       with:
         luacheckrc_url: https://raw.githubusercontent.com/Nexela/Factorio-luacheckrc/master/.luacheckrc
-
-    - name: Factorio Mod Portal Publish
-      uses: shanemadden/factorio-mod-portal-publish@1.0.3
+    - name: mod-portal-publish
+      uses: shanemadden/factorio-mod-portal-publish@master
       env:
         FACTORIO_PASSWORD: ${{ secrets.FACTORIO_PASSWORD }}
         FACTORIO_USER: ${{ secrets.FACTORIO_USER }}
